@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meat & Fish - Organica</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #d4edda; /* Light green background */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a.active {
+            color: #f57c00; /* Lightish orange color */
+        }
+
+        /* Container and Grid Styles */
+        .container {
+            max-width: 1200px;
+            margin: 80px auto 20px; /* Adjust margin for fixed header */
+            padding: 20px;
+        }
+
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .grid-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .card-title {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .price-wrapper {
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.2em;
+            color: #27a745;
+        }
+
+        .del {
+            font-size: 1em;
+            color: #888;
+            text-decoration: line-through;
+        }
+
+        .btn-primary {
+            background-color: #27a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            text-align: center;
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: #218838;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #fa9025; /* Lightish orange color */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-links {
+            margin-top: 10px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #f57c00; /* Lightish orange color */
+            color: #fff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+
+        .scroll-top:hover {
+            background-color: #e64a19; /* Darker orange for hover */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="home.html" class="logo">E-Shop</a>
+        <nav class="navbar">
+            <a href="home.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="icons">
+            <i class='bx bx-search'></i>
+            <i class='bx bx-user'></i>
+            <i class='bx bx-cart'></i>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <h1 class="section-title">Our Meat & Fish Selection</h1>
+        <ul class="grid-list">
+            <!-- Repeat this block for each product -->
+            <li>
+                <div class="product-card">
+                    <figure class="card-banner">
+                        <img src="./images/chicken.jpeg" alt="Full Chicken">
+                    </figure>
+                    <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <h3 class="card-title">
+                        <a href="#">Full Chicken</a>
+                    </h3>
+                    <div class="price-wrapper">
+                        <del class="del">$25.00</del>
+                        <data class="price" value="23.00">$23.00</data>
+                    </div>
+                    <button class="btn-primary">Add to Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-card">
+                    <figure class="card-banner">
+                        <img src="./images/chickenbreast.jpeg" alt="Beetroot">
+                    </figure>
+                    <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <h3 class="card-title">
+                        <a href="#">Chicken breast</a>
+                    </h3>
+                    <div class="price-wrapper">
+                        <del class="del">$20.00</del>
+                        <data class="price" value="18.00">$18.00</data>
+                    </div>
+                    <button class="btn-primary">Add to Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-card">
+                    <figure class="card-banner">
+                        <img src="./images/chickenlegs.jpeg" alt="Potato">
+                    </figure>
+                    <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <h3 class="card-title">
+                        <a href="#">Chicken</a>
+                    </h3>
+                    <div class="price-wrapper">
+                        <del class="del">$15.00</del>
+                        <data class="price" value="14.00">$14.00</data>
+                    </div>
+                    <button class="btn-primary">Add to Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-card">
+                    <figure class="card-banner">
+                        <img src="./images/mutton.jpeg" alt="Onion">
+                    </figure>
+                    <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <h3 class="card-title">
+                        <a href="#">Mutton</a>
+                    </h3>
+                    <div class="price-wrapper">
+                        <del class="del">$8.00</del>
+                        <data class="price" value="30.00">$27.00</data>
+                    </div>
+                    <button class="btn-primary">Add to Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-card">
+                    <figure class="card-banner">
+                        <img src="./images/small fish.jpeg" alt="Carrot">
+                    </figure>
+                    <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <h3 class="card-title">
+                        <a href="#">Small Fish</a>
+                    </h3>
+                    <div class="price-wrapper">
+                        <del class="del">$13.00</del>
+                        <data class="price" value="11.00">$11.00</data>
+                    </div>
+                    <button class="btn-primary">Add to Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-card">
+                    <figure class="card-banner">
+                        <img src="./images/Andhrafish.jpeg" alt="Ladies Finger">
+                    </figure>
+                    <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <h3 class="card-title">
+                        <a href="#">Andhra Fish</a>
+                    </h3>
+                    <div class="price-wrapper">
+                        <del class="del">$18.00</del>
+                        <data class="price" value="17.00">$17.00</data>
+                    </div>
+                    <button class="btn-primary">Add to Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-card">
+                    <figure class="card-banner">
+                        <img src="./images/crabs.jpeg" alt="Tomato">
+                    </figure>
+                    <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <h3 class="card-title">
+                        <a href="#">Crabs </a>
+                    </h3>
+                    <div class="price-wrapper">
+                        <del class="del">$20.00</del>
+                        <data class="price" value="19.00">$19.00</data>
+                    </div>
+                    <button class="btn-primary">Add to Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-card">
+                    <figure class="card-banner">
+                        <img src="./images/prawns.jpeg" alt="Mirchi">
+                    </figure>
+                    <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <h3 class="card-title">
+                        <a href="#">Prawns</a>
+                    </h3>
+                    <div class="price-wrapper">
+                        <del class="del">$22.00</del>
+                        <data class="price" value="21.00">$21.00</data>
+                    </div>
+                    <button class="btn-primary">Add to Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-card">
+                    <figure class="card-banner">
+                        <img src="./images/lobster.jpeg" alt="DrumStick">
+                    </figure>
+                    <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <h3 class="card-title">
+                        <a href="#">Lobster</a>
+                    </h3>
+                    <div class="price-wrapper">
+                        <del class="del">$16.00</del>
+                        <data class="price" value="15.00">$15.00</data>
+                    </div>
+                    <button class="btn-primary">Add to Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-card">
+                    <figure class="card-banner">
+                        <img src="./images/mussles.jpeg" alt="DrumStick">
+                    </figure>
+                    <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <h3 class="card-title">
+                        <a href="#">Mussels</a>
+                    </h3>
+                    <div class="price-wrapper">
+                        <del class="del">$18.00</del>
+                        <data class="price" value="17.00">$17.00</data>
+                    </div>
+                    <button class="btn-primary">Add to Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-card">
+                    <figure class="card-banner">
+                        <img src="./images/oysters.jpeg" alt="DrumStick">
+                    </figure>
+                    <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <h3 class="card-title">
+                        <a href="#">Oysters</a>
+                    </h3>
+                    <div class="price-wrapper">
+                        <del class="del">$50.00</del>
+                        <data class="price" value="48.00">$48.00</data>
+                    </div>
+                    <button class="btn-primary">Add to Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-card">
+                    <figure class="card-banner">
+                        <img src="./images/salmon.jpeg" alt="DrumStick">
+                    </figure>
+                    <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <h3 class="card-title">
+                        <a href="#">Salmon</a>
+                    </h3>
+                    <div class="price-wrapper">
+                        <del class="del">$16.00</del>
+                        <data class="price" value="15.00">$15.00</data>
+                    </div>
+                    <button class="btn-primary">Add to Cart</button>
+                </div>
+            </li>
+            <!-- More products here -->
+        </ul>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 E-Shop. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <a href="#" class="scroll-top"><i class='bx bx-up-arrow-alt'></i></a>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Products - Organica</title>
+    <style>
+        body {
+            background-color: #d4edda; /* Light green background */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 20px 40px; /* Increased padding for larger header */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 2em; /* Increased logo size */
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 20px;
+            flex-grow: 1;
+            justify-content: center;
+        }
+
+        .navbar a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em; /* Increased font size */
+        }
+
+        .navbar a.active {
+            color: #f57c00; /* Lightish orange color */
+        }
+
+        .icons {
+            display: flex;
+            gap: 5px;
+            margin-left: 2rem;
+        }
+
+        .icons i {
+            font-size: 1.5em;
+             /* Adjusted icon size */
+            color: #333;
+            cursor: pointer;
+        }
+
+        .icons i:hover {
+            color: #f57c00; /* Hover color for icons */
+        }
+        .iconsz{
+            display: flex;
+            gap: 5px;
+            font-size: 1.5em;
+             /* Adjusted icon size */
+            color: #333;
+            cursor: pointer;
+            margin-right: 4rem;
+            margin-left: 0.5rem;
+        }
+        .iconsz:hover {
+            color: #f57c00; /* Hover color for icons */
+        }
+
+        /* Container and Grid Styles */
+        .container {
+            max-width: 1200px;
+            margin: 80px auto 20px; /* Adjust margin for fixed header */
+            padding: 20px;
+        }
+
+        .main-heading {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            margin: 15px 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .product-card a {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #27a745;
+            text-decoration: none;
+            border: 2px solid #27a745;
+            border-radius: 5px;
+        }
+
+        .product-card a:hover {
+            background-color: #27a745;
+            color: #fff;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #fa9025; /* Lightish orange color */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-links {
+            margin-top: 10px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #f57c00; /* Lightish orange color */
+            color: #fff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+
+        .scroll-top:hover {
+            background-color: #e64a19; /* Darker orange for hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="home.html" class="logo">E-Shop</a>
+        <nav class="navbar">
+            <a href="home.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="icons">
+            <i class='bx bx-search'></i>
+            <i class='bx bx-user'></i>
+
+        </div>
+        <div class="iconsz">
+
+            <i class='bx bx-cart'></i>
+        </div>
+
+    </header>
+    <div class="container">
+        <h1 class="main-heading">Explore Our Store</h1>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="./images/products-vegetables.jpeg" alt="Fresh Vegetables">
+                <h3>Fresh Vegetables</h3>
+                <a href="./freshvegetables.html">Click Here</a>
+            </div>
+            <div class="product-card">
+                <img src="./images/product-meat and fresh image.jpg" alt="Meat and Fish">
+                <h3>Meat and Fish</h3>
+                <a href="./Fish-meat.html">Click Here</a>
+            </div>
+            <div class="product-card">
+                <img src="./images/products-fresh fruits.jpeg" alt="Fresh Fruits">
+                <h3>Fresh Fruits</h3>
+                <a href="./fresh-fruits.html">Click Here</a>
+            </div>
+            <div class="product-card">
+                <img src="./images/products-Dairy products.jpeg" alt="Dairy Products">
+                <h3>Dairy Products</h3>
+                <a href="./Dairy_Products.html">Click Here</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 E-Shop. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <a href="#" class="scroll-top"><i class='bx bx-up-arrow-alt'></i></a>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

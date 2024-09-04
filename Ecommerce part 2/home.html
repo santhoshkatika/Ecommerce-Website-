@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-commerce Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            background-color: #d4edda; /* Light green background */
+        }
+
+        header {
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a.active {
+            color: #f57c00; /* Lightish orange color */
+        }
+
+        .icons i {
+            font-size: 1.5em;
+            color: #333;
+            margin-left: 10px;
+        }
+
+        .header {
+            padding: 20px;
+        }
+
+        .home {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px 40px; /* Space for fixed header and padding */
+            background-color: #fff;
+            text-align: center;
+            min-height: 100vh; /* Ensure the section covers the full viewport height */
+        }
+
+        .home-content {
+            max-width: 50%;
+            padding-right: 20px;
+        }
+
+        .home-content h1 {
+            font-size: 3em;
+            color: #333;
+        }
+
+        .home-content p {
+            font-size: 1.5em;
+            color: #555;
+            margin: 20px 0;
+        }
+
+        .home-img {
+            max-width: 50%;
+        }
+
+        .home-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        footer {
+            background: #fa9025; /* Lightish orange color */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-links {
+            margin-top: 10px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Button Styles */
+        .btn {
+            background-color: #f57c00; /* Lightish orange color */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #e64a19; /* Darker orange for hover */
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #f57c00; /* Lightish orange color */
+            color: #fff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+
+        .scroll-top:hover {
+            background-color: #e64a19; /* Darker orange for hover */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <a href="home.html" class="logo">E-Shop</a>
+        <nav class="navbar">
+            <a href="home.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="icons">
+            <i class='bx bx-search'></i>
+            <i class='bx bx-user'></i>
+            <i class='bx bx-cart'></i>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Welcome to E-Shop</h1>
+            <p>Find the best products at the most affordable prices.</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+        <div class="home-img">
+            <img src="./images/download.png" alt="Shopping"> <!-- Updated image filename -->
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 E-Shop. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <a href="#" class="scroll-top"><i class='bx bx-up-arrow-alt'></i></a>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

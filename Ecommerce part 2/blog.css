@@ -1,0 +1,295 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d4edda;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+.header {
+    background: #0056b3; /* Updated Blue */
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header .navbar {
+    display: flex;
+}
+
+.header .navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+    position: relative;
+}
+
+.header .navbar a.active {
+    color: #ffcc00;
+}
+
+.header .icons i {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+
+/* Blog Hero Section */
+.blog-hero {
+    background: #0056b3; /* Updated Blue */
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-top: 4rem; /* Add margin to account for the fixed header */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Blog Content Section */
+.blog-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+/* Featured Post Styles */
+.featured-post {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.featured-post img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.featured-post h2 {
+    color: #0056b3; /* Updated Blue */
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.featured-post p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    color: #0056b3; /* Updated Blue */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Recent Posts Styles */
+.recent-posts {
+    width: 100%;
+}
+
+.post {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem; /* Adds space between posts */
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.post h3 {
+    color: #0056b3; /* Updated Blue */
+    font-size: 1.75rem;
+    margin: 1rem 0;
+}
+
+.post p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    color: #0056b3; /* Updated Blue */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 100%;
+    max-width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.sidebar h2 {
+    color: #0056b3; /* Updated Blue */
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.sidebar ul li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar ul li a {
+    color: #0056b3; /* Updated Blue */
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Categories and Tags Sections */
+.categories, .tags {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 2rem 0; /* Ensure margins top and bottom */
+    width: 100%; /* Make sure the section spans full width */
+}
+
+.categories h2, .tags h2 {
+    color: #0056b3; /* Updated Blue */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.categories ul, .tags {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categories ul li, .tags a {
+    margin-bottom: 0.5rem;
+}
+
+.categories ul li a, .tags a {
+    color: #0056b3; /* Updated Blue */
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.categories ul li a:hover, .tags a:hover {
+    text-decoration: underline;
+    background: #e0f2f1; /* Light Green Background for Tags */
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+/* Footer Styles */
+footer {
+    background: #0056b3; /* Updated Blue */
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-links {
+    margin-top: 1rem;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #0056b3; /* Updated Blue */
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.scroll-top i {
+    font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-content {
+        flex-direction: column;
+    }
+
+    .featured-post, .post, .sidebar, .categories, .tags {
+        max-width: 100%;
+    }
+
+    .sidebar {
+        margin-top: 2rem;
+    }
+}
